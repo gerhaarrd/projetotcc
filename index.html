@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adminix | Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              adminix: {
+                ice: "#ebf1ff",
+                mist: "#b7badb",
+                iris: "#6e74b2",
+                royal: "#404997",
+                night: "#3b3b68",
+                coal: "#353544",
+              },
+            },
+            fontFamily: {
+              sans: ["Segoe UI", "Tahoma", "Geneva", "Verdana", "sans-serif"],
+            },
+            boxShadow: {
+              panel: "0 28px 80px rgba(53, 53, 68, 0.24)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background:
+          radial-gradient(circle at top left, rgba(235, 241, 255, 0.95), transparent 32%),
+          radial-gradient(circle at bottom right, rgba(110, 116, 178, 0.35), transparent 28%),
+          linear-gradient(135deg, #ebf1ff 0%, #b7badb 45%, #6e74b2 100%);
+      }
+
+      .grid-pattern {
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+        background-size: 30px 30px;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen font-sans text-adminix-coal">
+    <main class="grid-pattern flex min-h-screen items-center justify-center px-4 py-10 sm:px-6 lg:px-8">
+      <section class="grid w-full max-w-6xl overflow-hidden rounded-[32px] bg-white/70 shadow-panel backdrop-blur-xl lg:grid-cols-[1.05fr_0.95fr]">
+        <div class="relative overflow-hidden bg-adminix-coal px-8 py-10 text-adminix-ice sm:px-12 sm:py-14">
+          <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(183,186,219,0.32),_transparent_35%),linear-gradient(145deg,_rgba(64,73,151,0.96),_rgba(53,53,68,1))]"></div>
+          <div class="absolute -left-16 top-16 h-44 w-44 rounded-full bg-adminix-mist/20 blur-3xl"></div>
+          <div class="absolute bottom-0 right-0 h-52 w-52 translate-x-14 translate-y-14 rounded-full bg-adminix-iris/30 blur-3xl"></div>
+
+          <div class="relative z-10 flex h-full flex-col justify-between">
+            <div>
+              <div class="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-medium tracking-[0.22em] uppercase">
+                <span class="h-2.5 w-2.5 rounded-full bg-adminix-ice"></span>
+                Adminix
+              </div>
+
+              <h1 class="mt-10 max-w-md text-4xl font-semibold leading-tight sm:text-5xl">
+                Sistema para gerenciamento de empresas.
+              </h1>
+
+              <p class="mt-6 max-w-lg text-base leading-7 text-adminix-ice/80 sm:text-lg">
+                Protótipo desenvolvido para demonstrar uma interface de acesso a um sistema de apoio à administração empresarial, com foco em organização, controle e usabilidade.
+              </p>
+            </div>
+
+            <div class="relative mt-12 grid gap-4 sm:grid-cols-3">
+              <article class="rounded-3xl border border-white/10 bg-white/10 p-4 backdrop-blur-sm">
+                <p class="text-2xl font-semibold">Login</p>
+                <p class="mt-1 text-sm text-adminix-ice/75">controle de acesso ao sistema</p>
+              </article>
+              <article class="rounded-3xl border border-white/10 bg-white/10 p-4 backdrop-blur-sm">
+                <p class="text-2xl font-semibold">Usuários</p>
+                <p class="mt-1 text-sm text-adminix-ice/75">entrada para perfis administrativos</p>
+              </article>
+              <article class="rounded-3xl border border-white/10 bg-white/10 p-4 backdrop-blur-sm">
+                <p class="text-2xl font-semibold">Gestão</p>
+                <p class="mt-1 text-sm text-adminix-ice/75">acesso ao ambiente principal</p>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-adminix-ice/80 px-8 py-10 sm:px-12 sm:py-14">
+          <div class="mx-auto flex h-full w-full max-w-md flex-col justify-center">
+            <div class="mb-8">
+              <p class="text-sm font-semibold uppercase tracking-[0.28em] text-adminix-iris">
+                Tela protótipo
+              </p>
+              <h2 class="mt-3 text-3xl font-semibold text-adminix-coal">
+                Entrar na sua conta
+              </h2>
+              <p class="mt-3 text-sm leading-6 text-adminix-night/75">
+                Esta tela representa o acesso inicial ao sistema Adminix, desenvolvido como proposta visual para um trabalho de conclusão de curso.
+              </p>
+            </div>
+
+            <form class="space-y-5">
+              <label class="block">
+                <span class="mb-2 block text-sm font-medium text-adminix-coal">E-mail corporativo</span>
+                <input
+                  type="email"
+                  placeholder="voce@empresa.com"
+                  class="w-full rounded-2xl border border-adminix-mist bg-white px-4 py-3.5 text-sm text-adminix-coal outline-none transition placeholder:text-adminix-night/45 focus:border-adminix-royal focus:ring-4 focus:ring-adminix-royal/15"
+                />
+              </label>
+
+              <label class="block">
+                <div class="mb-2 flex items-center justify-between gap-4">
+                  <span class="text-sm font-medium text-adminix-coal">Senha</span>
+                  <a href="#" class="text-sm font-medium text-adminix-royal transition hover:text-adminix-night">
+                    Esqueci minha senha
+                  </a>
+                </div>
+                <input
+                  type="password"
+                  placeholder="Digite sua senha"
+                  class="w-full rounded-2xl border border-adminix-mist bg-white px-4 py-3.5 text-sm text-adminix-coal outline-none transition placeholder:text-adminix-night/45 focus:border-adminix-royal focus:ring-4 focus:ring-adminix-royal/15"
+                />
+              </label>
+
+              <div class="flex items-center justify-between gap-4 text-sm">
+                <label class="flex items-center gap-3 text-adminix-night/80">
+                  <input
+                    type="checkbox"
+                    class="h-4 w-4 rounded border-adminix-mist text-adminix-royal focus:ring-adminix-royal/30"
+                  />
+                  Manter conectado
+                </label>
+                <span class="rounded-full bg-adminix-mist/50 px-3 py-1 text-xs font-medium uppercase tracking-[0.24em] text-adminix-night">
+                  Seguro
+                </span>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full rounded-2xl bg-adminix-royal px-4 py-3.5 text-sm font-semibold text-white shadow-lg shadow-adminix-royal/30 transition hover:-translate-y-0.5 hover:bg-adminix-night"
+              >
+                Entrar no Adminix
+              </button>
+            </form>
+
+            <p class="mt-8 text-center text-sm text-adminix-night/70">
+              Novo por aqui?
+              <a href="#" class="font-semibold text-adminix-royal transition hover:text-adminix-night">
+                Solicite acesso.
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
